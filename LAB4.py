@@ -3,18 +3,10 @@ import math
 
 def main():
     while True:
-<<<<<<< HEAD
-        print("\nHi Ms Hanh, please Choose the question to solve:")
-        print("1. One: Array operations")
-        print("2. Two: Distance between two pixels")
-        print("3. Three: Text processing pipeline")
-        print("4. Exit")
-=======
         print("\nChoose the question to solve:")
         print("1. Question 1: Array operations")
         print("2. Question 2: Distance between two pixels")
         print("3. Exit")
->>>>>>> parent of 1afb07c (Final Update on Question 3)
 
         choice = input("Enter your choice: ")
         if choice == "1":
@@ -137,10 +129,7 @@ def question_2():
 
 if __name__ == "__main__":
     main()
-<<<<<<< HEAD
-=======
 
 #def two(A):
 #Write your code here Quoc, I will connect it to the main UI for you
 #test test
->>>>>>> parent of ff89e7c (Merge branch 'main' of https://github.com/tquoc0112/PPL-Lab4)
