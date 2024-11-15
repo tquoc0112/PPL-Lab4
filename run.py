@@ -98,5 +98,9 @@ def one_d(A):
     even_numbers = list(filter(lambda x: x % 2 == 0, A))
     print(even_numbers)
 
+
+def two(A):
+#Write your code here Quoc, I will connect it to the main UI for you
+
 if __name__ == "__main__":
     main()
