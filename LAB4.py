@@ -1,12 +1,15 @@
 # PPL LAB 4 _ ITITWE21039 + ITITWE21118
 import math
+import string 
+from functools import reduce
 
 def main():
     while True:
         print("\nChoose the question to solve:")
         print("1. Question 1: Array operations")
         print("2. Question 2: Distance between two pixels")
-        print("3. Exit")
+        print("3. Question 3: Text Pipeline processing ")
+        print("4. Exit")
 
         choice = input("Enter your choice: ")
         if choice == "1":
@@ -14,7 +17,10 @@ def main():
         elif choice == "2":
             question_2()
         elif choice == "3":
+            question_3()
+        elif choice == "4":
             print("Exiting the program.")
+        elif choice == "5":
             break
         else:
             print("Invalid choice. Please try again.")
@@ -127,9 +133,31 @@ def question_2():
     result = distance(x1, y1, x2, y2)
     print(f"The distance between the two pixels is: {result}")
 
+
+
+def question_3():
+    text = input("Enter the text to process: ")
+
+    # removing punctuation
+    remove_punctuation = lambda txt: txt.translate(str.maketrans('', '', string.punctuation))
+
+    # lowercase string txt 
+    to_lowercase = lambda txt: txt.lower()
+
+    # splitting text into words in string txt
+    split_text = lambda txt: txt.split()
+
+    # filtering stop words from list of words in string txt  (common stop words: the, is, in, and, to, a)
+    filter_stop_words = lambda words: [word for word in words if word not in {"the", "is", "in", "and", "to", "a"}]
+
+    # Compose function to combine transformations
+    def compose(*functions):
+        return reduce(lambda f, g: lambda x: f(g(x)), functions)
+
+    # Create the processing pipeline
+    pipeline = compose(filter_stop_words, split_text, to_lowercase, remove_punctuation)
+    result = pipeline(text)
+    print("Processed text:", result)
+
 if __name__ == "__main__":
     main()
-
-#def two(A):
-#Write your code here Quoc, I will connect it to the main UI for you
-#test test
