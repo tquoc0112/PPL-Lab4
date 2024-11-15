@@ -5,7 +5,7 @@ import string
 
 def main():
     while True:
-        print("\nChoose the question to solve:")
+        print("\nHi Ms Hanh, please Choose the question to solve:")
         print("1. One: Array operations")
         print("2. Two: Distance between two pixels")
         print("3. Three: Text processing pipeline")
