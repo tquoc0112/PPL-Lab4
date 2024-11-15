@@ -20,7 +20,6 @@ def main():
             question_3()
         elif choice == "4":
             print("Exiting the program.")
-        elif choice == "5":
             break
         else:
             print("Invalid choice. Please try again.")
