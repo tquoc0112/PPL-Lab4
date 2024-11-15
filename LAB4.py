@@ -118,3 +118,10 @@ def three():
 
 if __name__ == "__main__":
     main()
+<<<<<<< HEAD
+=======
+
+#def two(A):
+#Write your code here Quoc, I will connect it to the main UI for you
+#test test
+>>>>>>> parent of ff89e7c (Merge branch 'main' of https://github.com/tquoc0112/PPL-Lab4)
