@@ -1,15 +1,33 @@
-#PPL LAB 4 _ ITITWE21039 + ITITWE21118
+# PPL LAB 4 _ ITITWE21039 + ITITWE21118
 import math
 
 def main():
+    while True:
+        print("\nChoose the question to solve:")
+        print("1. Question 1: Array operations")
+        print("2. Question 2: Distance between two pixels")
+        print("3. Exit")
+
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            question_1()
+        elif choice == "2":
+            question_2()
+        elif choice == "3":
+            print("Exiting the program.")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+def question_1():
     A = input_array()
     while True:
-        print("\nChoose an operation to perform:")
-        print("1. (1A) Calculate squares of numbers ")
-        print("2. (1B) Calculate cubes of numbers ")
-        print("3. (1C) Filter squares in range [20, 40] ")
-        print("4. (1D) Extract even numbers ")
-        print("5. Exit")
+        print("\nChoose an operation to perform for Question 1:")
+        print("1. (1A) Calculate squares of numbers")
+        print("2. (1B) Calculate cubes of numbers")
+        print("3. (1C) Filter squares in range [20, 40]")
+        print("4. (1D) Extract even numbers")
+        print("5. Go back to main menu")
         
         choice = input("Enter your choice: ")
         if choice == "1":
@@ -21,7 +39,6 @@ def main():
         elif choice == "4":
             one_d(A)
         elif choice == "5":
-            print("Exiting the program.")
             break
         else:
             print("Invalid choice. Please try again.")
@@ -98,8 +115,17 @@ def one_d(A):
     even_numbers = list(filter(lambda x: x % 2 == 0, A))
     print(even_numbers)
 
+def question_2():
+    # Prompt the user to input coordinates
+    x1, y1 = map(float, input("Enter coordinates of the first pixel (x1, y1): ").split())
+    x2, y2 = map(float, input("Enter coordinates of the second pixel (x2, y2): ").split())
+
+    # Using lambda to calculate the distance between two pixels
+    distance = lambda x1, y1, x2, y2: math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+    
+    # Calculate and display the result
+    result = distance(x1, y1, x2, y2)
+    print(f"The distance between the two pixels is: {result}")
+
 if __name__ == "__main__":
     main()
-
-#def two(A):
-#Write your code here Quoc, I will connect it to the main UI for you
